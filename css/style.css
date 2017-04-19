@@ -1,0 +1,22 @@
+body {
+	background-color: #849d8f;
+	line-height: 22px; 
+	font-size: 16px;
+	color: #323232;
+	font-weight: normal;
+	font-family: "Roboto", sans-serif;
+}
+
+.ice-cream_name {
+	line-height: 60,35px; 
+	font-size: 60px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.promo_phrase {
+	line-height: 41px; 
+	font-size: 35px;
+	color: #ffffff;
+	font-weight: bold;
+}
