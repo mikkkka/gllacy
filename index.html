@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main_header">
-      <div class="container">
+      <div class="container clearfix">
        <div class="main_logo">
          <img src="img/logo.png" width="154" height="64" alt="Глейси">
        </div>
@@ -15,7 +15,7 @@
          <ul >
            <li>
              <a href="catalog.html">Каталог</a>
-             <ul>
+             <ul class="sub_catalog">
                <li>
                <a href="#">Новинки</a>
                </li>
@@ -45,31 +45,23 @@
          <ul>
            <li>
              <a class="btn search" href="#">Поиск</a>
-             <ul>
-               <li>
-                 <div class="search_dialog">
-                   <form>
-                     <input type="text" name="search">
-                   </form>
-                 </div>
-               </li>
-             </ul>
+             <div class="search_dialog">
+               <form>
+                 <input type="text" name="search">
+               </form>
+             </div>
            </li>
            <li>
              <a class="btn login" href="#">Вход</a>
-             <ul>
-               <li>
-                 <div class="login_dialog">
-                   <form>
-                     <input type="email" name="email" placeholder="Электронная почта">
-                     <input type="password" name="password" placeholder="Пароль">
-                     <button class="btn submit" type="submit">Войти</button>
-                     <a href="#">Забыли пароль?</a>
-                     <a href="#">Новая регистрация</a>
-                   </form>
-                 </div>
-               </li>
-             </ul>
+             <div class="login_dialog">
+               <form>
+                 <input type="email" name="email" placeholder="Электронная почта">
+                 <input type="password" name="password" placeholder="Пароль">
+                 <button class="btn submit" type="submit">Войти</button>
+                 <a href="#">Забыли пароль?</a>
+                 <a href="#">Новая регистрация</a>
+               </form>
+             </div>
            </li>
            <li>
              <a class ="btn cart" href="#">Пусто</a>
@@ -77,22 +69,22 @@
          </ul>
        </div>
        <div class="header_contacts">
-         <span>С 10 до 20, ежедневно</span>
+         <span>С 10 до 20, ежедневно</span><br>
          <span><b>8 812 450-25-25</b></span>
        </div>
      </div>
     </header>
-    <main class="container">
+    <main class="container clearfix">
       <div class="slider">
-        <div class="slider_promo1">
+        <div class="slider promo1">
           <img src="img/icecream_1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
           <h2 class="ice-cream_name">Крем-брюле и пломбир с малиновым джемом</h2>
         </div>
-        <div class="slider_promo2">
+        <div class="slider promo2">
           <img src="img/icecream_2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
           <h2 class="ice-cream_name">Шоколадный пломбир и лимонный сорбет</h2>
         </div>
-        <div class="slider_promo3">
+        <div class="slider promo3">
           <img src="img/icecream_3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
           <h2 class="ice-cream_name">Пломбир с помадкой и клубничный щербет</h2>
         </div>
@@ -101,21 +93,21 @@
           <input type="radio" name="slider-btn" value="2">
           <input type="radio" name="slider-btn" value="3">
         </form>
-        <a class="btn slider" href="#">Давайте оба!</a>
+        <a class="btn_slider" href="#">Давайте оба!</a>
       </div>
-      <section class="promo">
-        <div class="promo_left">
+      <section class="promo_features">
+        <div class="promo left">
           <h3 class="promo_phrase">Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="btn_promo" href="#">Хочу варенье!</a>
         </div>
-        <div class="promo_right">
+        <div class="promo right">
           <h3 class="promo_phrase">Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="btn_promo" href="#">Хочу шоколадки!</a>
         </div>
       </section>
-      <section class="catalog">
+      <section class="catalog clearfix">
         <div class="catalog_item">
           <div class="hit"></div>
           <img src="img/catalog_icecream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -141,7 +133,7 @@
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
         </div>
       </section>
-      <section class="features">
+      <section class="features clearfix">
         <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h3>
         <div class="features_left">
           <div class="features_icon"></div>
@@ -156,7 +148,7 @@
           <p>Доставка нашего мороженного до заказчиков осуществляется в специальном термопакете, который не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
         </div>
       </section>
-      <section class="news">
+      <section class="news clearfix">
         <div class="blog">
           <h3>Новое в нашем блоге</h3>
           <a href="#">
@@ -194,7 +186,7 @@
       </section>
     </main>
     <footer class="main_footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="social">
           <a class="social_tw" href="#"><img src="img/twitter.png" width="32" height="32" alt="Твитер"></a>
           <a class="social_ig" href="#"><img src="img/instagram.png" width="32" height="32" alt="Инстаграм"></a>
@@ -202,18 +194,22 @@
           <a class="social_vk" href="#"><img src="img/vk.png" width="32" height="32" alt="Вконтакте"></a>
         </section>
         <nav class="footer_nav">
-          <ul>
-            <li><a href="#">Для поставщиков</a></li>
-            <li><a href="#">О производстве</a></li>
-          </ul>
-          <ul>
-            <li><a href="#">Наши документы</a></li>
-            <li><a href="#">Экологические стандарты</a></li>
-          </ul>
+          <div class="footer_nav_column1">
+            <ul>
+              <li><a href="#">Для поставщиков</a></li>
+              <li><a href="#">О производстве</a></li>
+            </ul>
+          </div>
+          <div class="footer_nav_column2">
+            <ul>
+              <li><a href="#">Наши документы</a></li>
+              <li><a href="#">Экологические стандарты</a></li>
+            </ul>
+          </div>
         </nav>
         <section class="author">
           <a class="author_logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy_logo.png" width="108" height="38" alt="лендинг интенсива «Базовый HTML и CSS»"></a>
-          <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2016</span>
+          <p>Сделано в<a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> &copy; 2017</p>
         </section>
       </div>
     </footer>

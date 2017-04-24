@@ -1,22 +1,354 @@
 body {
-	background-color: #849d8f;
+	background-color: #9aaea3;
 	line-height: 22px; 
 	font-size: 16px;
-	color: #323232;
+	color: #ffffff;
 	font-weight: normal;
 	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+
 }
 
 .ice-cream_name {
 	line-height: 61px; 
 	font-size: 60px;
-	color: #ffffff;
 	font-weight: bold;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .promo_phrase {
 	line-height: 41px; 
 	font-size: 35px;
-	color: #ffffff;
 	font-weight: bold;
+	margin-top: 0;
+}
+
+.main_header {
+	padding-top: 9px;
+	outline: 1px solid green;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1146px;
+	outline: 1px solid black;
+	padding: 0 27px;
+}
+
+.main_logo {
+	width: 154px;
+	float: left;
+	margin-right: 24px;
+	outline: 1px solid red;
+}
+
+.main_nav {
+	width: 500px;
+	float: left;
+	outline: 1px solid blue;
+}
+
+.sub_catalog,
+.search_dialog,
+.login_dialog,
+.cart_dialog,
+.promo2,
+.promo3,
+.subscription_dialog {
+	display: none;
+}
+
+.user_block {
+	float: right;
+	width: 300px;
+	outline: 1px solid yellow;
+}
+
+.header_contacts {
+	float: right;
+	width: 170px;
+	margin-left: 200px;
+	outline: 1px solid purple;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.header_contacts b {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: bold;
+}
+
+.main_nav li,
+.user_block li,
+.breadcrumbs li,
+.pagination li {
+	display: inline-block;
+	outline: 1px dotted pink;
+}
+
+.main_nav {
+	font-size: 0;
+}
+
+.main_nav li {
+	font-size: 16px;
+	line-height: 18px; 
+	margin-right: 27px;
+}
+
+.breadcrumbs {
+	float: left;
+	width: 400px;
+	font-size: 0;
+	outline: 1px solid green;
+	clear: left;
+	vertical-align: bottom;
+}
+
+.breadcrumbs li {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	margin-top: 28px;
+	margin-right: 22px;
+}
+
+.slider {
+	margin-left: auto;
+	margin-right: auto;
+	outline: 1px solid green;
+}
+
+.slider_controls {
+	float: left;
+	width: 80px;
+}
+
+.btn_slider {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.catalog_item {
+	float: left;
+	width: 267px;
+	margin-right: 26px;
+}
+
+.catalog_item:nth-child(4n+4) {
+	margin-right: 0;
+}
+
+.catalog_item img {
+	border-radius: 267px;
+}
+
+.pagination {
+	width: 188px;
+	float: right;
+	outline: 1px solid green;
+	font-size: 0px;
+	margin-top: 84px;
+}
+
+.pagination li {
+	margin-right: 21px;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.pagination li:last-child {
+	margin-right: 0;
+}
+
+.promo {
+	width: 520px;
+	min-height: 228px;
+	outline: 1px solid purple;
+	margin-bottom: 38px;
+	padding: 20px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.features {
+	color: #323232;
+	padding: 27px 21px;
+	margin-top:	30px;
+	outline: 1px solid red;
+	margin-bottom: 40px; 
+}
+
+.features h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 500;
+}
+
+.features_left {
+	float: left;
+	width: 480px;
+	margin-left: 56px;
+	margin-right: 80px; 
+}
+
+.features_right {
+	float: left;
+	width: 480px;
+}
+
+.news {
+	margin-bottom: 40px;
+}
+
+.blog {
+	float: left;
+	width: 520px;
+	min-height: 200px;
+	outline: 1px solid yellow;
+	padding: 20px;
+	color: #323232;
+}
+
+.blog a {
+	display: block;
+	color: #323232;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	text-decoration: underline;
+	margin-right: 230px;
+}
+
+.subscription {
+	float: right;
+	width: 520px;
+	min-height: 200px;
+	outline: 1px solid yellow;
+	padding: 20px;
+	color: #5a5a5a;
+}
+
+.map {
+	height: 430px;
+	outline: 1px solid blue;
+	margin: 0 -27px;
+	background-image: url("../img/map.png");
+}
+
+.contacts {
+	float: right;
+	width: 302px;
+	color: #323232;
+	background-color: #fefefe;
+	border-radius: 10px;
+	padding: 28px 25px;
+	margin-right: 27px;
+	margin-top: 62px;
+}
+
+.main_footer {
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+.social {
+	float: left;
+	width: 185;
+}
+
+.social a {
+	margin-right: 11px;
+}
+
+
+.author {
+	float: right;
+	width: 200px;
+	outline: 1px solid cyan;
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: -6px;
+
+}
+
+.author p {
+	padding: 0;
+	margin: 0;
+}
+
+.footer_nav_column1 {
+	float: left;
+	margin-left: 225px;
+	margin-right: 31px;
+}
+
+.footer_nav_column2 {
+	float: left;
+}
+
+.sort_filter {
+	float: left;
+	width: 200px;
+	margin-right: 20px;
+	min-height: 80px;
+	outline: 1px solid red;
+}
+
+.price_filter {
+	float: left;
+	width: 220px;
+	margin-right: 20px;
+	min-height: 80px;
+	outline: 1px solid red;
+}
+
+.fat_filter {
+	float: left;
+	width: 420px;
+	min-height: 80px;
+	outline: 1px solid red;	
+}
+
+.filler_filter {
+	float: left;
+	width: 860px;
+	min-height: 80px;
+	outline: 1px solid red;
+}
+
+.btn_filter {
+	display: inline-block;
+	float: right;
 }

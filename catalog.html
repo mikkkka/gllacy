@@ -7,11 +7,11 @@
   </head>
   <body>
     <header class="main_header">
-      <div class="container">
-       <div class="main_logo">
+      <div class="container clearfix">
+        <div class="main_logo">
          <a href="index.html"><img src="img/logo.png" width="154" height="64" alt="Глейси"></a>
-       </div>
-       <nav class="main_nav">
+        </div>
+        <nav class="main_nav">
          <ul>
            <li>
              <a href="#">Каталог</a>
@@ -23,8 +23,8 @@
              <a href="#">О Компании</a>
            </li>
          </ul>
-       </nav>
-       <div class="user_block">
+        </nav>
+        <div class="user_block">
          <ul>
            <li>
              <a class="btn search" href="#">Поиск</a>
@@ -33,7 +33,7 @@
              <a class="btn login" href="#">Вход</a>
            </li>
            <li>
-             <a class ="btn cart" href="#">Пусто</a>
+             <a class ="btn cart" href="#">2 Товара</a>
              <div class="cart_dialog">
                <table>
                  <tr>
@@ -54,15 +54,7 @@
              </div>
            </li>
          </ul>
-       </div>
-       <div class="catalog_contacts">
-         <span>С 10 до 20, ежедневно</span>
-         <span><b>8 812 450-25-25</b></span>
-       </div>
-     </div>
-    </header>
-    <main class="container">
-      <div class="catalog_header">
+        </div>
         <div class="breadcrumbs">
           <ul>
             <li>
@@ -71,24 +63,36 @@
             <li>
               <a href="#">Каталог</a>
             </li>
-            <li>Сливочное</li>
+            <li>
+              <a>Сливочное</a>
+            </li>
           </ul>
         </div>
+        <div class="header_contacts">
+          <span>С 10 до 20, ежедневно</span><br>
+          <span><b>8 812 450-25-25</b></span>
+        </div>
       </div>
-        <h2 class="promo_phrase">Сливочное мороженное</h2>
-        <div class="filter">
+    </header>
+    <main class="container clearfix">
+      <h1 class="promo_phrase">Сливочное мороженное</h1>
+        <div class="filter clearfix">
           <form>
-            <label for="sort">Сортировка:</label>
-            <select id="sort" name="sort">
-              <option>по популярности</option>
-              <option>сначала недорогие</option>
-              <option>сначала дорогие</option>
-              <option>по жирности</option>
-            </select>
-            <label for="price">Цена: 100 руб. - 500 руб.</label>
-            <input id="price" name="price" type="range" min="100" max="500" step="5">
-            <span>Жирность:</span>
+            <div class="sort_filter">
+              <label for="sort">Сортировка:</label><br>
+              <select id="sort" name="sort">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </div>
+            <div class="price_filter">
+              <label for="price">Цена: 100 руб. - 500 руб.</label><br>
+              <input id="price" name="price" type="range" min="100" max="500" step="5">
+            </div>
             <div class="fat_filter">
+              <span>Жирность:</span><br>
               <label>
                 <input type="radio" name="fat" value="0">
                 0%
@@ -106,8 +110,8 @@
                 свыше 30%
               </label>
             </div>
-            <span>Наполнители:</span>
             <div class="filler_filter">
+              <span>Наполнители:</span><br>
               <label>
                 <input type="checkbox" name="chocolate" checked>
                 шоколадные
@@ -128,11 +132,11 @@
                 <input type="checkbox" name="jam">
                 джемы
               </label>
+              <button class="btn_filter" type="submit">Применить</button>
             </div>
-            <button class="btn_filter" type="submit">Применить</button>
           </form>
         </div>
-      <section class="catalog">
+      <section class="catalog clearfix">
         <div class="catalog_item">
           <img src="img/catalog_icecream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <p class="price">310&#8381;<span>/кг</span></p>
@@ -197,6 +201,9 @@
       <div class="pagination">
         <ul>
           <li>
+            <a class="nav_btn" href="#"><</a>
+          </li>
+          <li>
             <a class="nav_btn" href="#">1</a>
           </li>
           <li>
@@ -218,7 +225,7 @@
       </div>
     </main>
     <footer class="main_footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="social">
           <a class="social_tw" href="#"><img src="img/twitter.png" width="32" height="32" alt="Твитер"></a>
           <a class="social_ig" href="#"><img src="img/instagram.png" width="32" height="32" alt="Инстаграм"></a>
@@ -226,18 +233,22 @@
           <a class="social_vk" href="#"><img src="img/vk.png" width="32" height="32" alt="Вконтакте"></a>
         </section>
         <nav class="footer_nav">
-          <ul>
-            <li><a href="#">Для поставщиков</a></li>
-            <li><a href="#">О производстве</a></li>
-          </ul>
-          <ul>
-            <li><a href="#">Наши документы</a></li>
-            <li><a href="#">Экологические стандарты</a></li>
-          </ul>
+          <div class="footer_nav_column1">
+            <ul>
+              <li><a href="#">Для поставщиков</a></li>
+              <li><a href="#">О производстве</a></li>
+            </ul>
+          </div>
+          <div class="footer_nav_column2">
+            <ul>
+              <li><a href="#">Наши документы</a></li>
+              <li><a href="#">Экологические стандарты</a></li>
+            </ul>
+          </div>
         </nav>
         <section class="author">
-          <a class="author_logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy_logo.png" width="108" height="38" alt="Лендинг интенсива «Базовый HTML и CSS»"></a>
-          <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2016</span>
+          <a class="author_logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy_logo.png" width="108" height="38" alt="лендинг интенсива «Базовый HTML и CSS»"></a>
+          <p>Сделано в<a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> &copy; 2017</p>
         </section>
       </div>
     </footer>
