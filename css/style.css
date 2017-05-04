@@ -1,12 +1,16 @@
 body {
-	background-color: #9aaea3;
+	background-color: #849d8f;
 	line-height: 22px; 
 	font-size: 16px;
 	color: #ffffff;
 	font-weight: normal;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
+}
+
+body > input[type="radio"] {
+	display: none;
 }
 
 a {
@@ -14,10 +18,26 @@ a {
 	color: #ffffff;
 }
 
-ul {
+/*ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}*/
+
+.site_wrapper {
+	min-width: 900px;
+	background-color: #849d8f;
+	background-image: url("../img/icecream_1.png");
+	background-repeat: no-repeat;
+	background-position: top center;	
+}
+
+.content_wrapper {
+	min-width: 846px;
+	width: 1146px;
+	margin: 0 auto;
+	padding: 0 27px;
+	outline: 2px solid red;
 }
 
 .sub_catalog,
@@ -34,33 +54,47 @@ ul {
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1146px;
-	padding: 9px 27px 0px 27px;
-	align-items: center;
-	flex-wrap: wrap;
+	padding: 9px 0 0 0;
+	align-items: flex-start;
+	outline: 1px solid black;
+	position: relative;
 }
 
 .main_logo {
 	width: 154px;
-	margin-right: 24px;
+	margin-right: 10px;
+}
+
+.main_header ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .main_nav {
-	width: 600px;
+	width: 400px;
+	position: relative;
+	margin-top: 22px;
+	outline: 1px solid blue;
 }
 
 .user_block {
 	width: 300px;
 	margin-left: auto;
+	margin-top: 22px;
+	outline: 1px solid yellow;
 }
 
 .header_contacts {
+	position: absolute;
 	width: 170px;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: bold;
 	text-align: right;
-	margin-left: auto;
+	bottom: -40px;
+	right: 0;
 	}
 
 .header_contacts b {
@@ -69,88 +103,175 @@ ul {
 	font-weight: bold;
 }
 
-.main_nav li,
+/*.main_nav li,*/
 .user_block li,
 .breadcrumbs li,
 .pagination li {
 	display: inline-block;
 }
 
-.main_nav {
-	font-size: 0;
-}
-
-.main_nav li {
+.main_nav_list_item > a {
+	padding: 8px 14px;
 	font-size: 16px;
 	line-height: 18px; 
-	margin-right: 27px;
+	text-decoration-line: underline; 
+	text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
-.main_content {
-	margin-left: auto;
-	margin-right: auto;
-	width: 1200px;
+.main_nav a:hover {
+	color: #333333;
+	background-color: #f7f6f3;
+	border-radius: 17px;
 }
 
-.main_container {
-	width: 1146px;
-	padding: 0 27px;
+.main_nav a:hover ~ .sub_catalog,
+.sub_catalog li:hover {
+	display: block;
+}
+
+.sub_catalog {
+	position: absolute;
+	top: 37px;
+	left: -5px;
+	background-color: #f8f7f4;
+	border-radius: 4px;
+}
+
+.sub_catalog ul {
+	margin: 0;
+	padding: 0;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.sub_catalog_list_item:first-child {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sub_catalog li {
+	width: 143px;
+	padding: 0 6px;
+}
+
+.sub_catalog_list_item:first-child a {
+	font-weight: bold;
+}
+
+.sub_catalog a {
+	display: block;
+	font-size: 14px;
+	line-height: 16px;
+	color: #323232;
+	padding: 0;
+	margin: 13px 0 13px 15px;
 }
 
 .slider {
-	width: 1146px;
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 40px; 
+	position: relative;
+	padding-top: 272px;
+	text-align: center;
+	outline: 1px solid purple;
+	margin-bottom: 40px;
 }
 
-.main_image {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -100px;
-	width: 1080px;
-	z-index: -1;
+.slide {
+	display: none;
 }
 
-.ice-cream_name {
+.slide_title {
 	line-height: 61px; 
 	font-size: 60px;
 	font-weight: bold;
-	text-align: center;
 	width: 700px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -495px;
+	margin: 0 auto;
+	margin-bottom: 27px;
+	
 }
 
-.slider_controls {
-	width: 80px;
-}
-
-.slider_promo {
-	margin-left: auto;
-	margin-right: auto;
+.slide_btn {
 	display: inline-block;
 	padding: 12px 40px;
+	vertical-align: top;
+	margin-left: auto;
+	margin-right: auto;
 	font-size: 32px;
 	font-weight: bold;
 	line-height: 44px;
-	background-color: #ea5239;
+	background-color: #f26843;
+	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 	border-radius: 50px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76); 
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slide_btn:hover {
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+}
+
+.slide_btn:active {
+	box-shadow: inset 0 2px 2px rgba(148, 39, 24, 1);
+	background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+}
+
+.slider_controls {
+	position: absolute;
+	bottom: 22px;
+	left: 0;
+	font-size: 0;
+	z-index: 20;
+}
+
+.slider_controls label {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	vertical-align: top;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#btn_1:checked ~ .site_wrapper #slide1,
+#btn_2:checked ~ .site_wrapper #slide2,
+#btn_3:checked ~ .site_wrapper #slide3 {
+	display: block;
+}
+
+#btn_1:checked ~ .site_wrapper label[for="btn_1"],
+#btn_2:checked ~ .site_wrapper label[for="btn_2"],
+#btn_3:checked ~ .site_wrapper label[for="btn_3"] {
+	background: #ffffff;
+}
+
+#btn_1:checked ~ .site_wrapper {
+	background-image: url("../img/icecream_1.png");
+	background-color: #849d8f;
+}
+
+#btn_2:checked ~ .site_wrapper {
+	background-image: url("../img/icecream_2.png");
+	background-color: #8996a6;
+}
+
+#btn_3:checked ~ .site_wrapper {
+	background-image: url("../img/icecream_3.png");
+	background-color: #9d8b84;
 }
 
 .promo_features {
 	display: flex;
 	margin-bottom: 38px;
 	width: 1146px;
+	outline: 1px solid blue;
 }
 
 .promo {
 	width: 520px;
-	height: 228px;
+	min-width: 380px;
+	min-height: 228px;
 	padding: 20px;
 }
 
@@ -170,7 +291,8 @@ ul {
 	display: flex;
 	flex-wrap: wrap; 
 	justify-content: space-between;
-	margin-bottom: 40px;  
+	margin-bottom: 40px; 
+	outline: 1px solid green; 
 }
 
 .catalog_item {
@@ -262,8 +384,6 @@ ul {
 .map {
 	display: flex;
 	justify-content: flex-end;
-	height: 430px;
-	background-image: url("../img/map.png");
 }
 
 .contacts {
@@ -370,14 +490,19 @@ ul {
 
 .main_footer {
 	margin-top: 25px;
-	margin-bottom: 30px;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1146px;
-	padding: 0 27px;
+	padding: 0 27px 25px 27px;
 	flex-wrap: wrap;
 	justify-content: space-between; 
+}
+
+.main_footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .social {
