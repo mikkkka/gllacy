@@ -1,3 +1,183 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-cart {
+    width: 21px;
+    height: 20px;
+    background-position: -5px -5px;
+}
+
+.sprite-checkbox_checked {
+    width: 20px;
+    height: 20px;
+    background-position: -36px -5px;
+}
+
+.sprite-checkbox_checked_blocked {
+    width: 20px;
+    height: 20px;
+    background-position: -66px -5px;
+}
+
+.sprite-checkbox_off {
+    width: 20px;
+    height: 20px;
+    background-position: -96px -5px;
+}
+
+.sprite-checkbox_off_blocked {
+    width: 20px;
+    height: 20px;
+    background-position: -126px -5px;
+}
+
+.sprite-checkbox_off_hover {
+    width: 20px;
+    height: 20px;
+    background-position: -156px -5px;
+}
+
+.sprite-cow_icon {
+    width: 48px;
+    height: 49px;
+    background-position: -186px -5px;
+}
+
+.sprite-cross {
+    width: 11px;
+    height: 11px;
+    background-position: -244px -5px;
+}
+
+.sprite-enter {
+    width: 21px;
+    height: 19px;
+    background-position: -265px -5px;
+}
+
+.sprite-enter_hover {
+    width: 21px;
+    height: 19px;
+    background-position: -296px -5px;
+}
+
+.sprite-facebook {
+    width: 32px;
+    height: 32px;
+    background-position: -327px -5px;
+}
+
+.sprite-full_cart {
+    width: 21px;
+    height: 20px;
+    background-position: -369px -5px;
+}
+
+.sprite-heart {
+    width: 15px;
+    height: 13px;
+    background-position: -400px -5px;
+}
+
+.sprite-icecream_icon {
+    width: 49px;
+    height: 49px;
+    background-position: -425px -5px;
+}
+
+.sprite-instagram {
+    width: 32px;
+    height: 32px;
+    background-position: -484px -5px;
+}
+
+.sprite-leaf_icon {
+    width: 49px;
+    height: 49px;
+    background-position: -526px -5px;
+}
+
+.sprite-lookingglass_hover {
+    width: 17px;
+    height: 17px;
+    background-position: -585px -5px;
+}
+
+.sprite-lookinglass {
+    width: 17px;
+    height: 17px;
+    background-position: -612px -5px;
+}
+
+.sprite-pattern {
+    width: 40px;
+    height: 38px;
+    background-position: -639px -5px;
+}
+
+.sprite-radio_checked {
+    width: 21px;
+    height: 22px;
+    background-position: -689px -5px;
+}
+
+.sprite-radio_checked_blocked {
+    width: 21px;
+    height: 22px;
+    background-position: -720px -5px;
+}
+
+.sprite-radio_checked_hover {
+    width: 21px;
+    height: 22px;
+    background-position: -751px -5px;
+}
+
+.sprite-radio_off {
+    width: 21px;
+    height: 22px;
+    background-position: -782px -5px;
+}
+
+.sprite-radio_off_blocked {
+    width: 21px;
+    height: 22px;
+    background-position: -813px -5px;
+}
+
+.sprite-radio_off_hover {
+    width: 21px;
+    height: 22px;
+    background-position: -844px -5px;
+}
+
+.sprite-temp_logo {
+    width: 48px;
+    height: 49px;
+    background-position: -875px -5px;
+}
+
+.sprite-twitter {
+    width: 32px;
+    height: 32px;
+    background-position: -933px -5px;
+}
+
+.sprite-twitter_hover {
+    width: 32px;
+    height: 32px;
+    background-position: -975px -5px;
+}
+
+.sprite-vk {
+    width: 32px;
+    height: 32px;
+    background-position: -1017px -5px;
+}
+
 body {
 	background-color: #849d8f;
 	line-height: 22px; 
@@ -40,7 +220,6 @@ a {
 	outline: 2px solid red;
 }
 
-.sub_catalog,
 .search_dialog,
 .login_dialog,
 .cart_dialog,
@@ -74,17 +253,217 @@ a {
 
 .main_nav {
 	width: 400px;
+	margin-top: 13px;
 	position: relative;
-	margin-top: 22px;
-	outline: 1px solid blue;
+}
+
+.main_nav .sub_catalog {
+	display: none;
+} 
+
+.main_nav_list_item {
+	padding: 8px 14px;
+}
+
+.main_nav_list_item > a {
+	font-size: 16px;
+	line-height: 18px; 
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main_nav_list > li:hover {
+	background-color: #f7f6f3;
+	border-radius: 20px;
+}
+
+.main_nav_list > li:hover a {
+	color: #333333;
+}
+
+.main_nav li:hover .sub_catalog,
+.sub_catalog:hover {
+	display: block;
+}
+
+.sub_catalog {
+	position: absolute;
+	top: 44px;
+	left: -5px;
+	background-color: #f8f7f4;
+	border-radius: 5px;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.sub_catalog::before {
+	content: "  ";
+	display: block;
+	height: 15px;
+	width: 150px;
+	position: absolute;
+	top: -10px;
+}
+
+.sub_catalog_item:first-child {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sub_catalog li {
+	margin: 0 9px 0 6px;
+	padding: 12px 20px;
+}
+
+.sub_catalog_item:first-child a {
+	font-weight: bold;
+}
+
+.sub_catalog a {
+	display: block;
+	font-size: 14px;
+	line-height: 16px;
+	color: #323232;
+	padding: 0;
+}
+
+.sub_catalog li:hover {
+	background-color: #fbded7;
+	box-shadow: 
+		-6px 0 #fbded7,
+		9px 0 #fbded7; 
+}
+
+.sub_catalog li:active {
+	background-color: #f6b5a5;
+	box-shadow: 
+		-6px 0 #f6b5a5,
+		9px 0 #f6b5a5; 
+}
+
+.sub_catalog li .is_here {
+	background-color: #d07058;
+	box-shadow: 
+		-6px 0 #d07058,
+		9px 0 #d07058;
 }
 
 .user_block {
 	width: 300px;
 	margin-left: auto;
 	margin-top: 22px;
-	outline: 1px solid yellow;
+	}
+
+.user_block ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
 }
+
+.user_block li {
+	margin-left: 10px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.search_dialog {
+	position: absolute;
+}
+
+.btn_search {
+	vertical-align: top;
+	padding: 16px;
+	border-radius: 16px;
+	background-color: rgba(248, 247, 244, 0.2);
+	font-size: 0;
+	position: relative;
+}
+
+.btn_search::before {
+	display: block;
+	content: "";
+	width: 17px;
+    height: 17px;
+    background-position: -612px -5px;
+	background-image: url("../img/sprites.png");
+	position: absolute;
+	left: 8px;
+}
+
+.btn_search:hover {
+	background-color: #f8f7f4;
+}
+
+.btn_search:hover::before {
+	background-position: -585px -5px;
+}
+
+.btn_search:hover ~ .search_dialog {
+	display: block;
+}
+
+.login_dialog {
+	position: absolute;
+}
+
+.btn_login {
+	padding: 8px 15px 8px 45px;
+	border-radius: 20px;
+	background-color: rgba(248, 247, 244, 0.2);
+	position: relative;
+}
+
+.btn_login::before {
+	display: block;
+	content: "";
+	width: 21px;
+    height: 19px;
+    background-position: -265px -5px;
+	background-image: url("../img/sprites.png");
+	position: absolute;
+	left: 16px;
+}
+
+.btn_login:hover {
+	background-color: #f8f7f4;
+	color: #323232;
+}
+
+.btn_login:hover::before {
+	background-position: -296px -5px;
+}
+
+.btn_login:hover ~ .login_dialog {
+	display: block;
+}
+
+.btn_cart {
+	padding: 8px 34px 8px 45px;
+	border-radius: 20px;
+	background-color: rgba(248, 247, 244, 0.2);
+	position: relative;
+}
+
+.btn_cart::before {
+	display: block;
+	content: "";
+	width: 21px;
+	height: 20px;
+	background-image: url("../img/sprites.png");
+	background-position: -5px -5px;
+	position: absolute;
+	left: 16px;
+}
+
+/*.btn_cart:hover {
+	background-color: #f8f7f4;
+	color: #323232;
+}
+
+.btn_cart:hover::before {
+	background-position: -296px -5px;
+}*/
 
 .header_contacts {
 	position: absolute;
@@ -108,62 +487,6 @@ a {
 .breadcrumbs li,
 .pagination li {
 	display: inline-block;
-}
-
-.main_nav_list_item > a {
-	padding: 8px 14px;
-	font-size: 16px;
-	line-height: 18px; 
-	text-decoration-line: underline; 
-	text-decoration-color: rgba(255, 255, 255, 0.2);
-}
-
-.main_nav a:hover {
-	color: #333333;
-	background-color: #f7f6f3;
-	border-radius: 17px;
-}
-
-.main_nav a:hover ~ .sub_catalog,
-.sub_catalog li:hover {
-	display: block;
-}
-
-.sub_catalog {
-	position: absolute;
-	top: 37px;
-	left: -5px;
-	background-color: #f8f7f4;
-	border-radius: 4px;
-}
-
-.sub_catalog ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-}
-
-.sub_catalog_list_item:first-child {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.sub_catalog li {
-	width: 143px;
-	padding: 0 6px;
-}
-
-.sub_catalog_list_item:first-child a {
-	font-weight: bold;
-}
-
-.sub_catalog a {
-	display: block;
-	font-size: 14px;
-	line-height: 16px;
-	color: #323232;
-	padding: 0;
-	margin: 13px 0 13px 15px;
 }
 
 .slider {
@@ -232,6 +555,10 @@ a {
 	border: 2px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.slider_controls label:hover {
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 #btn_1:checked ~ .site_wrapper #slide1,
