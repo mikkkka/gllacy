@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
   </head>
   <body>
@@ -140,7 +140,7 @@
           </div>
         </section>
         <section class="features">
-          <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h3>
+          <h3>Магазин Глейси &mdash; это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h3>
           <div class="features_left">
             <p class="paragraph one">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             <p class="paragraph two">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
@@ -154,28 +154,30 @@
           <div class="blog">
             <h3>Новое в нашем блоге</h3>
             <a href="#">
-              <p>10 способов сервировки фруктовых щербетов к столу</p>
+              <span class="negativ">10 способов сервировки фруктовых щербетов к столу</span>
             </a>
           </div>
           <div class="subscription">
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и слать всякой не нужной ерунды. Честно =)</p>
-            <form action="https://echo.htmlacademy.ru/" method="post">
-              <input class="input_field" type="email" placeholder="Электронная почта">
-              <button class="btn subscription_btn" type="submit">Отправить</button>
-            </form>
+            <div class="subscription_inner">
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и слать всякой не нужной ерунды. Честно =)</p>
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <input class="input_field" type="email" placeholder="Электронная почта">
+                <button class="btn subscription_btn" type="submit">Отправить</button>
+              </form>
+            </div>
           </div>
         </section>
         </main>
       </div>
       <section class="map" id="map">
-        <iframe class="interactive_map" src="https://api-maps.yandex.ru/frame/v1/-/C6qeJR1H" height="430"></iframe>
+       <iframe class="interactive_map" src="https://api-maps.yandex.ru/frame/v1/-/C6qeJR1H" height="430"></iframe>
         <div class="contacts">
           <p>Адрес главного офиса и офлайн магазина:</p>
-          <p><b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+          <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
           <p>Для заказов по телефону:</p>
           <p><b>8 812 450-25-25</b></p>
           <p>(с 10 до 20 ежедневно)</p>
-          <button class="btn open" type="button">Форма обратной связи</button>
+          <a href="#" class="btn open">Форма обратной связи</a>
         </div>
       </section>
       <div class="content_wrapper">
@@ -218,6 +220,6 @@
       </div>
       <div class="subscription_dialog_overlay closed"></div>
     </div>
-    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="js/min.js"></script>
   </body>
 </html>
