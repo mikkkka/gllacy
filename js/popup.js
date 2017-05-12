@@ -1,7 +1,7 @@
 var open = document.querySelector('.open');
-var popup = document.querySelector('.subscription_dialog');
+var popup = document.querySelector('.feedback_dialog');
 var close = popup.querySelector('.close');
-var overlay = document.querySelector('.subscription_dialog_overlay'); 
+var overlay = document.querySelector('.feedback_dialog_overlay'); 
 
 open.addEventListener('click', function(evt) {
 	evt.preventDefault();
