@@ -1,5 +1,7 @@
 body {
     background-color: #849d8f;
+    background: -webkit-gradient(linear,left top, left bottom,from(#9db1a5),to(#849d8f));
+    background: linear-gradient(to bottom,#9db1a5 0%,#849d8f 100%);
     line-height: 22px;
     font-size: 16px;
     color: #fff;
@@ -145,6 +147,57 @@ img {
 .input_field:focus:-moz-placeholder {
     color: #5b9ddf;
     opacity: 1
+}
+
+.input_field_label {
+	font-size: 0px;
+	line-height: 13px;
+	color: #999999;
+	position: absolute
+	}
+
+.input_field_label[for="feedback_name"] {
+	top: 48px;
+	left: 40px
+}
+
+.input_field_label[for="feedback_email"] {
+	top: 113px;
+	left: 40px
+}
+
+.input_field_label[for="feedback_question"] {
+	top: 176px;
+	left: 40px
+}
+
+.input_field_label[for="search"] {
+	top: 5px;
+	left: 33px
+}
+
+.input_field_label[for="email"] {
+	top: 4px;
+	left: 33px
+}
+
+.input_field_label[for="password"] {
+	top: 68px;
+	left: 33px
+}
+
+.input_field_label[for="subscription_email"] {
+	top: -15px;
+	left: 17px
+}
+
+.input_field:focus + .input_field_label {
+	font-size: 11px;
+	color: #5b9ddf
+}
+
+.input_field:valid + .input_field_label {
+	font-size: 11px
 }
 
 .site_wrapper {
@@ -1131,7 +1184,8 @@ img {
 .subscription form {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    position: relative
 }
 
 .subscription .input_field {

@@ -53,7 +53,8 @@
                 <a class="btn_search" href="#">Поиск</a>
                 <div class="search_dialog">
                   <form action="https://echo.htmlacademy.ru/" method="post">
-                    <input class="input_field" type="text" name="search" placeholder="Что ищем?">
+                    <input class="input_field" type="text" name="search" placeholder="Что ищем?" required>
+                    <label class="input_field_label" for="search">Что ищем?</label>
                   </form>
                 </div>
               </li>
@@ -61,8 +62,10 @@
                 <a class="btn_login" href="#">Вход</a>
                 <div class="login_dialog">
                   <form action="https://echo.htmlacademy.ru/" method="post">
-                    <input class="input_field" type="email" name="email" placeholder="Электронная почта">
-                    <input class="input_field" type="password" name="password" placeholder="Пароль">
+                    <input class="input_field" type="email" name="email" placeholder="Электронная почта" required>
+                    <label class="input_field_label" for="email">Электронная почта</label>
+                    <input class="input_field" type="password" name="password" placeholder="Пароль" required>
+                    <label class="input_field_label" for="password">Пароль</label>
                     <button class="btn" type="submit">Войти</button>
                     <p>
                       <a class="negativ" href="#">Забыли пароль?</a>
@@ -159,9 +162,10 @@
           </div>
           <div class="subscription">
             <div class="subscription_inner">
-              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и слать всякой не нужной ерунды. Честно =)</p>
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
               <form action="https://echo.htmlacademy.ru/" method="post">
-                <input class="input_field" type="email" placeholder="Электронная почта">
+                <input class="input_field" type="subscription_email" placeholder="Электронная почта" required>
+                <label class="input_field_label" for="subscription_email">Электронная почта</label>
                 <button class="btn subscription_btn" type="submit">Отправить</button>
               </form>
             </div>
@@ -212,9 +216,12 @@
         <form action="https://echo.htmlacademy.ru/" method="post">
           <h3>Мы обязательно вам ответим!</h3>
           <button class="close" type="button">Закрыть</button>
-          <input class="input_field" type="text" name="name" placeholder="Как вас зовут?">
-          <input class="input_field" type="email" name="email" placeholder="Ваша почта для ответа?">
-          <textarea class="input_field" placeholder="Напишите что-нибудь..." cols="50" rows="10"></textarea>
+          <input class="input_field" type="text" name="feedback_name" placeholder="Как вас зовут?" required>
+          <label class="input_field_label" for="feedback_name">Как вас зовут?</label>
+          <input class="input_field" type="email" name="feedback_email" placeholder="Ваша почта для ответа?" required>
+          <label class="input_field_label" for="feedback_email">Ваша почта для ответа?</label>
+          <textarea class="input_field" name="feedback_question" placeholder="Напишите что-нибудь..." cols="50" rows="10" minlength="1" required></textarea>
+          <label class="input_field_label" for="feedback_question">Напишите что-нибудь...</label>
           <button class="btn" type="submit">Отправить</button>
         </form>
       </div>
